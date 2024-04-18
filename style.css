@@ -1,0 +1,51 @@
+.container {
+    width: 906px;
+    margin: 0 auto;
+    outline: 1px solid red;
+}
+
+.header-list {
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 92px;
+}
+
+.header-link {
+    list-style: none;
+    text-decoration: none;
+
+}
+
+.photo-list {
+    list-style: none;
+}
+
+.photo {
+    margin-bottom: 63px;
+    list-style: none;
+}
+
+.header {
+    margin-bottom: 92px;
+}
+
+.button {
+    margin-top: 90px;
+}
+
+.description {
+    margin-bottom: 32px;
+}
+
+.pre-description {
+    margin-bottom: 40px;
+}
+
+.span {
+    color: grey;
+    margin-bottom: 32px;
+}
+
+.photo-block{
+    margin-bottom: 62px;
+}
