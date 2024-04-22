@@ -1,3 +1,10 @@
+:root{
+    --header-list: rgb(125, 125, 125);
+    --header-list-hover:rgb(3, 169, 244);
+    --main-info:rgb(180, 173, 158);
+    --main-info2:rgb(98, 98, 98);
+}
+
 .container {
     width: 906px;
     margin: 0 auto;
@@ -6,23 +13,51 @@
 
 .header-list {
     list-style: none;
-    text-decoration: none;
     margin-bottom: 92px;
+font-family: Playfair Display;
+font-size: 14px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0%;
+text-align: left;
+display: flex;
+padding-left:0px ;
+justify-content: center;
+text-decoration: none;
+
+gap: 99px;
+
+}
+
+.header-likn:hover{
+    color: var(--header-list-hover)
 }
 
 .header-link {
     list-style: none;
     text-decoration: none;
+    
 
+}
+
+.header-likn{
+    text-decoration: none;
+    color: var(--header-list);
 }
 
 .photo-list {
     list-style: none;
+    
 }
 
 .photo {
     margin-bottom: 63px;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2px;
+    padding-left:0px ;
+    gap: 65px;
 }
 
 .header {
@@ -31,21 +66,52 @@
 
 .button {
     margin-top: 90px;
+    margin-bottom: 90px;
+    border: 1px solid var(--main-info2);
+    display: flex;
 }
 
 .description {
     margin-bottom: 32px;
+    color: var(--main-info2);
+    font-family: Playfair Display;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
 }
 
 .pre-description {
     margin-bottom: 40px;
+    color: var(--main-info2);
+font-family: Playfair Display;
+font-size: 30px;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: 0%;
+text-align: left;
 }
 
 .span {
-    color: grey;
+    color: var(--main-info2);
     margin-bottom: 32px;
 }
 
 .photo-block{
     margin-bottom: 62px;
+}
+.photo-item{
+    outline: red 1px solid;
+    width: 420px;
+}
+
+.Ubuntu{
+    color: var(--main-info);
+font-family: "Ubuntu";
+font-size: 14px;
+font-weight: 300;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: left;
 }
