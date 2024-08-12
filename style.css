@@ -68,7 +68,13 @@ gap: 99px;
     margin-top: 90px;
     margin-bottom: 90px;
     border: 1px solid var(--main-info2);
+    background-color: white;
+    width: 165px;
+height: 60px;
     display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 359px;
 }
 
 .description {
