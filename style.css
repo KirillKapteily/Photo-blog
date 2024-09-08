@@ -1,62 +1,215 @@
-:root{
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
     --header-list: rgb(125, 125, 125);
-    --header-list-hover:rgb(3, 169, 244);
-    --main-info:rgb(180, 173, 158);
-    --main-info2:rgb(98, 98, 98);
+    --header-list-hover: rgb(3, 169, 244);
+    --main-info: rgb(180, 173, 158);
+    --main-info2: rgb(98, 98, 98);
 }
 
 .container {
     width: 906px;
     margin: 0 auto;
-    outline: 1px solid red;
+
 }
 
 .header-list {
     list-style: none;
     margin-bottom: 92px;
-font-family: Playfair Display;
-font-size: 14px;
-font-weight: 400;
-line-height: 19px;
-letter-spacing: 0%;
-text-align: left;
-display: flex;
-padding-left:0px ;
-justify-content: center;
-text-decoration: none;
+    font-family: Playfair Display;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-decoration: none;
 
-gap: 99px;
+    gap: 99px;
 
 }
 
-.header-likn:hover{
-    color: var(--header-list-hover)
+.header-likn:hover {
+    color: var(--header-list-hover);
+
 }
 
 .header-link {
     list-style: none;
     text-decoration: none;
-    
 
 }
 
-.header-likn{
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    /* Напівпрозорий чорний фон */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 999;
+    /* Показує поверх іншого контенту */
+}
+
+.loader-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Легкий сірий колір фону */
+    border-top: 16px solid #3498db7a;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    /* Колір обертання */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear;
+            animation: spin 2s linear;
+}
+
+
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+        
+    }
+
+    
+}
+
+
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+        
+    }
+
+    
+}
+
+/* Для Firefox */
+html {
+    -moz-scrollbar-width: thin; /* Префікс для Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+  }
+  
+  /* Примусо
+  /* Примусовий стиль для старих версій браузерів */
+  .custom-scrollbar {
+    -webkit-scrollbar-width: thin; /* Префікс для Safari/Chrome */
+    -moz-scrollbar-width: thin; /* Префікс для Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+  }
+
+/* Загальний стиль для скролбару */
+::-webkit-scrollbar {
+    width: 12px; /* Ширина вертикального скролбару */
+    height: 12px; /* Висота горизонтального скролбару */
+  }
+  
+  /* Стиль для "дорожки" скролбару */
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Колір фону треку */
+    border-radius: 10px;
+  }
+  
+  /* Стиль для повзунка */
+  ::-webkit-scrollbar-thumb {
+  
+    background-color: #888; /* Колір повзунка */
+    border-radius: 10px;
+    border: 2px solid #f0f0f0; /* Зробити невеликий відступ від країв */
+  }
+  /* Зміна кольору при наведенні */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+.header-likn {
     text-decoration: none;
     color: var(--header-list);
+    -webkit-transition-property: color;
+    -o-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 250ms;
+         -o-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(.17, .67, .92, .57);
+         -o-transition-timing-function: cubic-bezier(.17, .67, .92, .57);
+            transition-timing-function: cubic-bezier(.17, .67, .92, .57);
 }
 
 .photo-list {
     list-style: none;
-    
+
 }
+
 
 .photo {
     margin-bottom: 63px;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding-left: 2px;
-    padding-left:0px ;
+    padding-left: 0px;
     gap: 65px;
 }
 
@@ -70,11 +223,33 @@ gap: 99px;
     border: 1px solid var(--main-info2);
     background-color: white;
     width: 165px;
-height: 60px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-justify-content: center;
-align-items: center;
-margin-left: 359px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 359px;
+    -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+    transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+    -o-transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transition-duration: 250ms;
+         -o-transition-duration: 250ms;
+            transition-duration: 250ms;
+}
+
+.button:hover {
+    background-color: rgb(207, 207, 207);
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+
 }
 
 .description {
@@ -91,12 +266,12 @@ margin-left: 359px;
 .pre-description {
     margin-bottom: 40px;
     color: var(--main-info2);
-font-family: Playfair Display;
-font-size: 30px;
-font-weight: 400;
-line-height: 40px;
-letter-spacing: 0%;
-text-align: left;
+    font-family: Playfair Display;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-align: left;
 }
 
 .span {
@@ -104,20 +279,163 @@ text-align: left;
     margin-bottom: 32px;
 }
 
-.photo-block{
+.photo-block {
     margin-bottom: 62px;
 }
-.photo-item{
-    outline: red 1px solid;
+
+.photo-item {
+    /* outline: red 1px solid; */
     width: 420px;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+         -o-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: 500ms;
+         -o-transition-duration: 500ms;
+            transition-duration: 500ms;
 }
 
-.Ubuntu{
+.photo-item:hover {
+    -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+}
+
+/* From Uiverse.io by Madflows */
+.toggle-switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked~.slider {
+    background-color: var(--light);
+}
+
+.header-svg {
+    height: 15px;
+    width: 15px;
+    display: block;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+         -o-transition-duration: 250ms;
+            transition-duration: 250ms;
+
+}
+
+.header-svg:hover {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked~.slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    background-color: var(--dark);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-8-17 10:54:46
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shadow-drop-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes shadow-drop-center {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+@keyframes shadow-drop-center {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+.Ubuntu {
     color: var(--main-info);
-font-family: "Ubuntu";
-font-size: 14px;
-font-weight: 300;
-line-height: 16px;
-letter-spacing: 0%;
-text-align: left;
+    font-family: "Ubuntu";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
 }

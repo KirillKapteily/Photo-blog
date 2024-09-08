@@ -23,6 +23,78 @@
 </head>
 
 <body>
+
+    <!-- <style>
+        /* Center the loader */
+
+        .loader{
+            background-color: aliceblue;
+        }
+
+        #loader {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: 1;
+          width: 120px;
+          height: 120px;
+          margin: -76px 0 0 -76px;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #3498db;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+          
+        }
+        
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        /* Add animation to "page content" */
+        .animate-bottom {
+          position: relative;
+          -webkit-animation-name: animatebottom;
+          -webkit-animation-duration: 1s;
+          animation-name: animatebottom;
+          animation-duration: 1s
+        }
+        
+        @-webkit-keyframes animatebottom {
+          from { bottom:-100px; opacity:0 } 
+          to { bottom:0px; opacity:1 }
+        }
+        
+        @keyframes animatebottom { 
+          from{ bottom:-100px; opacity:0 } 
+          to{ bottom:0; opacity:1 }
+        }
+        
+        #myDiv {
+          display: none;
+          text-align: center;
+        }
+        </style>
+
+    <div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Tada!</h2>
+  <p>Some text in my newly loaded page..</p>
+</div> -->
+
+<!-- <div class="backdrop">
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+  </div> -->
+      
     <header class="container" class="header">
         <nav>
 
@@ -31,7 +103,7 @@
                 <li class="header-link"><a href="#" class="header-likn">PHOTODIARY </a></li>
                 <li class="header-link"><a href="#" class="header-likn">MUSIC </a></li>
                 <li class="header-link"><a href="#" class="header-likn">TRAVEL</a></li>
-            </ul>
+                <li class="header-link"><a href="index-black.html" class="header-likn"><svg class="header-svg"><use href="symbol-defs.svg#icon-contrast" width="15" height="15"></use></svg></a></li>
         </nav>
     </header>
     <main>
@@ -91,10 +163,76 @@
                         ut
                         aliquip ex ea.</p>
                 </li>
-                <button type="button" class="button">Load More</button>
+                <li class="photo-item"><img src="1.jpg" alt="girl" class="photo-block"class="Ubuntu"><br><span
+                    class="span">LIFESTYLE</span>
+                <h3 class="pre-description">More than just a music festival</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea.</p>
+            </li>
+            <li class="photo-item">
+                <img src="2.jpg" alt="coffe" class="photo-block" class="Ubuntu"><br><span class="span">LIFESTYLE</span>
+                <h3 class="pre-description">Life tastes better with coffee</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea.</p>
+            </li>
+            <li class="photo-item">
+                <img src="3.jpg" alt="2 girls" class="photo-block" class="Ubuntu"><br><span class="span">LIFESTYLE</span>
+                <h3 class="pre-description">American dream</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea.</p>
+            </li>
+            <li class="photo-item">
+                <img src="4.jpg" alt="one girls" class="photo-block" class="Ubuntu"><br><span class="span">LIFESTYLE</span>
+                <h3 class="pre-description">A day exploring the Alps</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea.</p>
+            </li>
+            <li class="photo-item">
+                <img src="5.jpg" alt="one loj" class="photo-block" class="Ubuntu"><br><span class="span">LIFESTYLE</span>
+                <h3 class="pre-description">Top 10 song for running</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea.</p>
+            </li>
+            <li class="photo-item">
+                <img src="7.jpg" alt="one ts" class="photo-block" class="Ubuntu"><br><span class="span">LIFESTYLE</span>
+                <h3 class="pre-description">Cold winter days</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea.</p>
+            </li>
             </ul>
+            <button type="button" class="button">Load More</button>
         </div>
     </main>
+    <script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 </body>
 
 </html>
