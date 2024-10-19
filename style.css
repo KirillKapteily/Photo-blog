@@ -12,13 +12,13 @@
     --main-info2: rgb(98, 98, 98);
 }
 
-.container {
+/* .container {
     width: 906px;
     margin: 0 auto;
 
-}
+} */
 
-.header-list {
+/* .header-list {
     list-style: none;
     margin-bottom: 92px;
     font-family: Playfair Display;
@@ -49,7 +49,7 @@
     list-style: none;
     text-decoration: none;
 
-}
+} */
 
 body,
 html {
@@ -180,7 +180,7 @@ html {
     background-color: #555;
   }
 
-.header-likn {
+/* .header-likn {
     text-decoration: none;
     color: var(--header-list);
     -webkit-transition-property: color;
@@ -192,9 +192,9 @@ html {
     -webkit-transition-timing-function: cubic-bezier(.17, .67, .92, .57);
          -o-transition-timing-function: cubic-bezier(.17, .67, .92, .57);
             transition-timing-function: cubic-bezier(.17, .67, .92, .57);
-}
+} */
 
-.photo-list {
+/* .photo-list {
     list-style: none;
 
 }
@@ -211,13 +211,13 @@ html {
     padding-left: 2px;
     padding-left: 0px;
     gap: 65px;
-}
+} */
 
-.header {
+/* .header {
     margin-bottom: 92px;
-}
+} */
 
-.button {
+/* .button {
     margin-top: 90px;
     margin-bottom: 90px;
     border: 1px solid var(--main-info2);
@@ -283,21 +283,7 @@ html {
     margin-bottom: 62px;
 }
 
-.photo-item {
-    /* outline: red 1px solid; */
-    width: 420px;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    -o-transition-property: transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 250ms;
-         -o-transition-duration: 250ms;
-            transition-duration: 250ms;
-    -webkit-transition-duration: 500ms;
-         -o-transition-duration: 500ms;
-            transition-duration: 500ms;
-}
+
 
 .photo-item:hover {
     -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -307,7 +293,7 @@ html {
             transform: rotate(-3deg);
 }
 
-/* From Uiverse.io by Madflows */
+
 .toggle-switch {
     position: relative;
     width: 100px;
@@ -345,9 +331,9 @@ html {
 
 .checkbox:checked~.slider {
     background-color: var(--light);
-}
+} */
 
-.header-svg {
+/* .header-svg {
     height: 15px;
     width: 15px;
     display: block;
@@ -366,9 +352,9 @@ html {
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
-}
+} */
 
-.slider::before {
+/* .slider::before {
     content: "";
     position: absolute;
     top: 10px;
@@ -391,7 +377,7 @@ html {
     background-color: var(--dark);
     -webkit-box-shadow: none;
     box-shadow: none;
-}
+} */
 
 
 /* ----------------------------------------------
@@ -406,7 +392,7 @@ html {
  * animation shadow-drop-center
  * ----------------------------------------
  */
-@-webkit-keyframes shadow-drop-center {
+/* @-webkit-keyframes shadow-drop-center {
     0% {
         -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
                 box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -427,10 +413,10 @@ html {
         -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
                 box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     }
-}
+} */
 
 
-.Ubuntu {
+/* .Ubuntu {
     color: var(--main-info);
     font-family: "Ubuntu";
     font-size: 14px;
@@ -438,4 +424,4 @@ html {
     line-height: 16px;
     letter-spacing: 0%;
     text-align: left;
-}
+} */

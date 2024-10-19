@@ -72,6 +72,12 @@ transition-timing-function: cubic-bezier(.17,.67,.92,.57);
     margin-bottom: 92px;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .button {
     margin-top: 90px;
     margin-bottom: 90px;
